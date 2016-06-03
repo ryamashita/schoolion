@@ -14,6 +14,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'materialize-sass'
 gem 'devise', '~> 3.4.1'
 gem 'toastr-rails'
+gem 'sendgrid', '~> 1.2', '>= 1.2.4'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+
 
 group :development, :test do
   gem 'byebug'
