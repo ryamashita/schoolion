@@ -17,7 +17,8 @@ gem 'toastr-rails'
 gem 'sendgrid', '~> 1.2', '>= 1.2.4'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
-
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 group :development, :test do
   gem 'byebug'
