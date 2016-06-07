@@ -29,7 +29,6 @@ class User < ActiveRecord::Base
           provider: access_token.provider,
           email: data["email"],
           uid: access_token.uid,
-          image: data["image"],
           password: Devise.friendly_token[0,20]
         )
       end
@@ -49,7 +48,6 @@ class User < ActiveRecord::Base
         user.email = auth.info.email
         user.image = auth.info.image
         user.password = Devise.friendly_token[0,20]
-      end
     end
   end
 
@@ -66,7 +64,6 @@ class User < ActiveRecord::Base
         user.email = auth.info.email
         user.image = auth.info.image
         user.password = Devise.friendly_token[0,20]
-      end
   end
 
 end

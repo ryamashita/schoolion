@@ -13,7 +13,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 	end
 
 	def facebook
-		@user = User.from_facebook_omniauth(request.env["omniauth.auth"], current_user)
+		@user = User.from_facebook_omniauth(request.env["omniauth.auth"])
 
 		if @user.persisted?
 		  sign_in_and_redirect @user, :event => :authentication
