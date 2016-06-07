@@ -19,8 +19,4 @@ Devise.setup do |config|
   require 'omniauth-facebook'
   config.omniauth :facebook, '733820026760459', '418896a99cdf79a7a680628dd3796a61', scope: 'email', info_fields: 'email,name'
 
-  require 'omniauth-twitter'
-  config.omniauth :twitter, 'AkMgm6MJJiLSiacMRsEiAZGzx', 'di393tjwV6mdsGUO7GxXPaOHHnVBVXXb7uiOG0df3PyMNzGwAg', scope: 'email', info_fields: 'email,name'
-
-
 end

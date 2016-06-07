@@ -18,8 +18,6 @@ gem 'sendgrid', '~> 1.2', '>= 1.2.4'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
-gem 'omniauth-twitter'
-gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
 group :development, :test do
   gem 'byebug'
