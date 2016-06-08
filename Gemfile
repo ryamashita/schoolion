@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.6'
 
 gem 'sass-rails', '~> 5.0'
@@ -23,6 +22,10 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
 
 gem 'paperclip', '~> 4.2.1'
+gem 'redcarpet', '~> 3.2.3'
+gem 'coderay', '~> 1.1.0'
+
+gem 'friendly_id', '~> 5.1.0'
 
 group :development, :test do
   gem 'byebug'
