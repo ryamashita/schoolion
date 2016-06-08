@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160608162425) do
+ActiveRecord::Schema.define(version: 20160608192518) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -74,6 +74,18 @@ ActiveRecord::Schema.define(version: 20160608162425) do
 
   add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.text     "comment"
+    t.datetime "created_at", null: false
+    t.integer  "star"
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "reviews", ["project_id"], name: "index_reviews_on_project_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+
   create_table "sessions", force: :cascade do |t|
     t.string   "session_id", null: false
     t.text     "data"
@@ -83,6 +95,17 @@ ActiveRecord::Schema.define(version: 20160608162425) do
 
   add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "subscriptions", ["project_id", "user_id"], name: "index_subscriptions_on_project_id_and_user_id", unique: true
+  add_index "subscriptions", ["project_id"], name: "index_subscriptions_on_project_id"
+  add_index "subscriptions", ["user_id"], name: "index_subscriptions_on_user_id"
 
   create_table "tasks", force: :cascade do |t|
     t.string   "title"

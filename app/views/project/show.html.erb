@@ -1,5 +1,5 @@
 <% content_for :head do %>
-	<title><%= @project.name %> |Code4Pro</title>
+	<title><%= @project.name %> |Schoolion</title>
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@code4startup">
@@ -30,7 +30,7 @@
 						<% if @project.price == 0 %>
 							<%= form_tag free_path do %>
 								<%= hidden_field_tag 'project_id', @project.id %>
-								<button type="submit" class="btn pink darken-2">Take this Project</button>
+								<button type="submit" class="btn pink darken-2">この講義を受講</button>
 							<% end %>
 						<% else %>
 
@@ -41,7 +41,7 @@
 								<%= hidden_field_tag 'stripeEmail' %>
 								<%= hidden_field_tag 'project_id', @project.id %>
 
-								<button id="customButton" type="button" class="btn pink darken-2">Take this Project</button><br>
+								<button id="customButton" type="button" class="btn pink darken-2">この講義を受講</button><br>
 
 								<script>
 								var handler = StripeCheckout.configure({
@@ -73,7 +73,7 @@
 						
 					<% else %>
 						<%= link_to new_user_session_path do %>	
-							<button type="submit" class="btn pink darken-2">Take this Project</button>
+							<button type="submit" class="btn pink darken-2">この講義を受講</button>
 						<% end %>
 					<% end %>
 
@@ -117,11 +117,11 @@
 					<div class="card-content grey-text text-darken-4">
 						<h5><%= @project.name %></h5>
 						<span id="average_rating"></span>
-						<p><%= @reviews.count %> <%= @reviews.count > 1? "Reviews" : "Review" %></p>
+						<p><%= @reviews.count %> <%= @reviews.count > 1? "レビュー" : "レビュー" %></p>
 						<hr>
 						<%= @project.content %>
 					
-						<h4>Reviews</h4>
+						<h4>レビュー</h4>
 						<div><%= render 'reviews/form' if @joined && !@hasReview %></div>
 						<div><%= render 'reviews/index' %></div>
 					</div>	    	

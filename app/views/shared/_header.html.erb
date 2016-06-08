@@ -1,13 +1,13 @@
 <header>
    <ul id="dropdown1" class="dropdown-content mask">
-      <li><%= link_to "受講コース", edit_user_registration_path %></li>
+      <li><%= link_to "受講コース", myprojects_path %></li>
       <li><%= link_to "プロフィール", edit_user_registration_path %></li>
       <li class="divider"></li>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
     </ul>
 
     <ul id="dropdown2" class="dropdown-content mask">
-      <li><%= link_to "受講コース", edit_user_registration_path %></li>
+      <li><%= link_to "受講コース", myprojects_path %></li>
       <li><%= link_to "プロフィール", edit_user_registration_path %></li>
       <li class="divider"></li>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
@@ -18,7 +18,7 @@
             <a href="#!" class="brand-logo">Schoolion</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-              <li><%= link_to "コース", edit_user_registration_path %></li>
+              <li><%= link_to "コース", root_path %></li>
               <% if(!user_signed_in?) %>
               <li><%= link_to "会員登録", new_user_registration_path %></li>
               <li><%= link_to "ログイン", new_user_session_path %></li>
