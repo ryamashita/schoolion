@@ -9,7 +9,5 @@ class CreateReviews < ActiveRecord::Migration
 
       t.timestamps null: false
     end
-    add_foreign_key :reviews, :projects
-    add_foreign_key :reviews, :users
   end
 end
