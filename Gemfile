@@ -19,6 +19,8 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 
+gem 'activeadmin', github: 'activeadmin'
+
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
