@@ -1,14 +1,14 @@
 <% content_for :head do %>
-	<title><%= @project.name %> |Schoolion</title>
+	<title><%= @project.name %> | Schoolion</title>
 
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:site" content="@code4startup">
-	<meta name="twitter:creator" content="@code4startup">
+	<meta name="twitter:site" content="@schoolion">
+	<meta name="twitter:creator" content="@schoolion">
 	<meta name="twitter:title" content="<%= @project.name %>">
 	<meta name="twitter:description" content="<%= @project.content %>">
 	<meta name="twitter:image:src" content="<%= image_url @project.image %>">
 
-	<meta property="og:site_name" content="Code4Pro">
+	<meta property="og:site_name" content="Schoolion">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="<%= @project.name %>">
 	<meta property="og:description" content="<%= @project.content %>">
@@ -142,7 +142,7 @@
 					</div>
 			    </div>
 			    <div id="discussions" class="col s10 offset-s1">
-					<div id="disqus_thread"></div>
+			    	<div id="disqus_thread"></div>
 					<script>
 					/**
 					* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -158,7 +158,7 @@
 					var d = document, s = d.createElement('script');
 					var disqus_identifier = '<%= @project.id %>';
 
-					s.src = '//rexit.disqus.com/embed.js';
+					s.src = '//schoolion.disqus.com/embed.js';
 
 					s.setAttribute('data-timestamp', +new Date());
 					(d.head || d.body).appendChild(s);
