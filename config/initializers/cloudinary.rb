@@ -1,6 +1,6 @@
 Cloudinary.config do |config|
-  config.cloud_name = 'schoolion'
-  config.api_key = '428358582434224'
-  config.api_secret = 'QxdiQtew5gflGD-AZvKLnyN5HnI'
+  config.cloud_name = 'hijqgxrj4'
+  config.api_key = ENV['CLOUDINARY_APP_ID']
+  config.api_secret = ENV['CLOUDINARY_APP_SECRET']
   config.cdn_subdomain = true
 end
