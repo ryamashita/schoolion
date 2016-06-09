@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160608201522) do
+ActiveRecord::Schema.define(version: 20160609183842) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -70,6 +70,8 @@ ActiveRecord::Schema.define(version: 20160608201522) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "slug"
+    t.string   "image"
+    t.string   "picture"
   end
 
   add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
@@ -142,6 +144,7 @@ ActiveRecord::Schema.define(version: 20160608201522) do
     t.string   "refresh_token"
     t.string   "access_token"
     t.datetime "expires"
+    t.string   "picture"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

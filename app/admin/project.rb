@@ -1,6 +1,6 @@
 ActiveAdmin.register Project do
 
-	permit_params :name, :content, :price, :image
+	permit_params :name, :content, :price, :image, :picture
 
 	show do |t|
 		attributes_table do
@@ -10,6 +10,7 @@ ActiveAdmin.register Project do
 			row :image do
 				project.image? ? image_tag(project.image.url, height: '100') : content_tag(:span, "No photo yet")
 			end
+			row :picture
 		end
 	end 
 
@@ -19,6 +20,7 @@ ActiveAdmin.register Project do
 			f.input :content
 			f.input :price
 			f.input :image, hint: f.project.image? ? image_tag(project.image.url, height: '100') : content_tag(:span, "Upload JPG/PNG/GIF image")
+			f.input :picture
 		end	
 		f.actions
 	end
