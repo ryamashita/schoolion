@@ -33,6 +33,8 @@ gem 'stripe'
 
 gem 'figaro', '~> 1.0.0'
 
+gem 'cloudinary'
+
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'
