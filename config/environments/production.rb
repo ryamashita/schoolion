@@ -80,8 +80,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'http://www.schoolion.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :user_name => 'app51698963@heroku.com',
-  :password => 'r4mizasr4482',
+  :user_name => ENV['MAILER_API_USERNAME'],
+  :password => ENV['MAILER_API_PASSWORD'],
   :domain => 'heroku.com',
   :address => 'smtp.sendgrid.net',
   :port => 587,

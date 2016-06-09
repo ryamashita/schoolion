@@ -22,7 +22,7 @@
 			<% if !@joined %>	
 
 				<div class="center">
-					<h1><%= @project.price == 0? "Free" : "$#{@project.price}" %></h1>
+					<h1><%= @project.price == 0? "無料" : "#{@project.price}円" %></h1>
 				</div>
 				<div class="card-action center">
 
@@ -41,7 +41,7 @@
 								<%= hidden_field_tag 'stripeEmail' %>
 								<%= hidden_field_tag 'project_id', @project.id %>
 
-								<button id="customButton" type="button" class="btn pink darken-2">この講義を受講</button><br>
+								<button id="customButton" type="button" class="btn pink darken-2">この講義を購入</button><br>
 
 								<script>
 								var handler = StripeCheckout.configure({
@@ -58,10 +58,10 @@
 								$('#customButton').on('click', function(e) {
 								// Open Checkout with further options:
 								handler.open({
-								  name: 'Code4Pro',
+								  name: 'Schoolion',
 								  description: '<%= @project.name %>',
 								  currency: "jpy",
-								  amount: '<%= @project.price_in_cents %>',
+								  amount: '<%= @project.price %>',
 								  email: '<%= current_user.email %>'
 								});
 								e.preventDefault();
@@ -108,9 +108,9 @@
 			<div class="row">
 			    <div class="col s12">
 			      <ul class="tabs">
-			        <li class="tab col s3"><a class="active" href="#about">About</a></li>
-			        <li class="tab col s3"><a href="#videos">Videos</a></li>
-			        <li class="tab col s3"><a href="#discussions">Discussions</a></li>
+			        <li class="tab col s3"><a class="active" href="#about">概要</a></li>
+			        <li class="tab col s3"><a href="#videos">講義動画</a></li>
+			        <li class="tab col s3"><a href="#discussions">Q＆A</a></li>
 			      </ul>
 			    </div>
 			    <div id="about" class="col s12">

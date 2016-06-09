@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
 gem 'rails', '4.2.6'
 
@@ -29,6 +28,10 @@ gem 'coderay', '~> 1.1.0'
 gem 'friendly_id', '~> 5.1.0'
 
 gem 'active_admin-sortable_tree', '~> 0.2.1'
+
+gem 'stripe'
+
+gem 'figaro', '~> 1.0.0'
 
 group :development, :test do
   gem 'byebug'

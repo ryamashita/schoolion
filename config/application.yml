@@ -1,0 +1,23 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+
+STRIPE_SECRET_KEY: 'sk_live_VL5dX9O8mtNG3RvdvZQdDcot'
+STRIPE_PUBLIC_KEY: 'pk_live_3aPJ9lWscnUbesDDb7lolBr5'
+
+MAILER_API_PASSWORD: 'r4mizasr4482'
+MAILER_API_USERNAME: 'app51698963@heroku.com'
+
+GOOGLE_APP_ID: '598316334523-ubn4slrtha366romc00eg7e89p4o6f5b.apps.googleusercontent.com'
+GOOGLE_APP_SECRET: 'RAS7xhRbKL0cvS8KySCBd5J1'
+
+FACEBOOK_APP_ID: '733820026760459'
+FACEBOOK_APP_SECRET: '418896a99cdf79a7a680628dd3796a61'

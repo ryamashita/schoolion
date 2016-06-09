@@ -18,7 +18,7 @@ class ChargeController < ApplicationController
 
 	  charge = Stripe::Charge.create(
 	    :customer    => customer.id,
-	    :amount      => project.price_in_cents,
+	    :amount      => project.price,
 	    :description => project.name,
 	    :currency    => 'jpy'
 	  )
